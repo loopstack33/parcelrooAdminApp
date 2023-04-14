@@ -3,19 +3,31 @@ import 'package:flutter/material.dart';
 import 'package:parcelroo_admin/utils/app_routes.dart';
 import 'package:parcelroo_admin/views/dashboard/widget/dash_widgets.dart';
 import 'package:parcelroo_admin/views/notifications/notifications_screen.dart';
+import 'package:provider/provider.dart';
 
 import '../../enums/color_constants.dart';
 import '../../widgets/drawerWidget.dart';
 import '../../widgets/text_widget.dart';
+import 'controller/dash_controller.dart';
 
 class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
+  final bool firstTime;
+  const Dashboard({Key? key,required this.firstTime}) : super(key: key);
 
   @override
   State<Dashboard> createState() => _DashboardState();
 }
 
 class _DashboardState extends State<Dashboard> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+   if(widget.firstTime){
+     Provider.of<DashController>(context, listen: false).getUserData();
+   }
+  }
 
   @override
   Widget build(BuildContext context) {

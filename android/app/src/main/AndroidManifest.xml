@@ -7,7 +7,7 @@
    <application
         android:label="parcelroo_admin"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/launcher_icon"
        android:allowBackup="false"
        android:usesCleartextTraffic="true"
        android:hardwareAccelerated="false">

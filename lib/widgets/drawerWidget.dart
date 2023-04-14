@@ -42,7 +42,7 @@ class _DrawerMobileWidgetState extends State<DrawerMobileWidget> {
                   title: myText(text: "Dashboard", fontFamily: "Poppins", size: 16, color: whiteColor),
                   leading: const Icon(Icons.home,color: whiteColor,size: 25),
                   onTap: () {
-                    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=> const Dashboard()),
+                    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=> const Dashboard(firstTime:false)),
                             (Route<dynamic> route) => false);
                   },
                 ),

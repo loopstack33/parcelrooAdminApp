@@ -10,7 +10,6 @@ import '../../../service/api_service.dart';
 import '../../../utils/app_routes.dart';
 import '../../../utils/shared_pref.dart';
 import '../../../utils/toasts.dart';
-import '../../../widgets/simple_dialog.dart';
 
 class LoginProvider extends ChangeNotifier{
   final formKey = GlobalKey<FormState>();
@@ -67,7 +66,7 @@ class LoginProvider extends ChangeNotifier{
           SharedPref.saveIsLoggedIn(true);
           ToastUtils.successToast("Login Successful", context);
           Future.delayed(const Duration(seconds: 1),(){
-            AppRoutes.pushAndRemoveUntil(context,const Dashboard());
+            AppRoutes.pushAndRemoveUntil(context,const Dashboard(firstTime:true));
           });
           _isLoading = false;
           notifyListeners();
@@ -97,7 +96,7 @@ class LoginProvider extends ChangeNotifier{
       SharedPref.saveIsLoggedIn(true);
       ToastUtils.successToast("Login Successful", context);
       Future.delayed(const Duration(seconds: 1),(){
-        AppRoutes.pushAndRemoveUntil(context,const Dashboard());
+        AppRoutes.pushAndRemoveUntil(context,const Dashboard(firstTime:true));
       });
       _isLoading = false;
       notifyListeners();
@@ -105,7 +104,7 @@ class LoginProvider extends ChangeNotifier{
       SharedPref.saveIsLoggedIn(true);
       ToastUtils.successToast("Login Successful", context);
       Future.delayed(const Duration(seconds: 1),(){
-        AppRoutes.pushAndRemoveUntil(context,const Dashboard());
+        AppRoutes.pushAndRemoveUntil(context,const Dashboard(firstTime:true));
       });
       _isLoading = false;
       notifyListeners();

@@ -14,7 +14,7 @@ class DashboardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 110,
       decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -34,13 +34,13 @@ class DashboardWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(iconData,color: dashColor,size: 30),
-                Text(total,style: const TextStyle(fontFamily: "Poppins",fontSize: 30,color: dashColor,fontWeight: FontWeight.w600))
+                Text(total,style: const TextStyle(fontFamily: "Poppins",fontSize: 28,color: dashColor,fontWeight: FontWeight.w600))
               ],
             ),
             const SizedBox(height: 10),
             SizedBox(
                 width: MediaQuery.of(context).size.width*0.7,
-                child: Text(type,style: const TextStyle(fontSize: 16,fontFamily: "Poppins",color: dashColor,fontWeight: FontWeight.w500),
+                child: Text(type,style: const TextStyle(fontSize: 15,fontFamily: "Poppins",color: dashColor,fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,))
           ],
         ),

@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
     else if (loggedIn == true && isLoggedIn == true ) {
       Provider.of<DashController>(context, listen: false).getUserData();
       Future.delayed(const Duration(seconds: 2),
-              () => AppRoutes.pushAndRemoveUntil(context, const Dashboard()));
+              () => AppRoutes.pushAndRemoveUntil(context, const Dashboard(firstTime:false)));
 
     }
     else{
